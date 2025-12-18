@@ -6,7 +6,7 @@
 # - Dataset
 # - Exploratory Data Analysis (EDA)
 # - Modelling
-# - Prediction
+# - Clustering
 #
 # Notes:
 # - This app is configured to work with the provided .pkl files (scaler, pca, kmeans, feature names).
@@ -197,7 +197,7 @@ def make_scatter(x: np.ndarray, y: np.ndarray, c: np.ndarray, title: str, xlabel
 st.sidebar.title("☀️ Solar Viability Clustering")
 page = st.sidebar.radio(
     "Menu",
-    ["Home", "Dataset", "Exploratory Data Analysis", "Modelling", "Prediction"],
+    ["Home", "Dataset", "Exploratory Data Analysis", "Modelling", "Clustering"],
 )
 
 # Load models once (and show a friendly error if missing)
@@ -425,14 +425,14 @@ This page uses the provided pickles to show model properties and (if dataset is 
     except Exception as e:
         st.warning(f"Failed to plot PCA scatter: {e}")
 
-elif page == "Prediction":
-    st.title("Prediction")
+elif page == "Clustering":
+    st.title("Clustering")
 
     viability_col = "Solar_Viability_Score"
 
     st.write(
         """
-Input values for each feature and the app will output the predicted **cluster**.
+Input values for each feature and the app will output the Clustering **cluster**.
 
 **Important note (model requirement):**
 Your saved pipeline was trained using the features listed in `feature_names_solar.pkl`.
@@ -491,7 +491,7 @@ In this app, to keep compatibility with your current `.pkl` files:
                     help="Required by the current saved pipeline. Remove only after retraining the model without it.",
                 )
 
-        submitted = st.form_submit_button("Predict Cluster")
+        submitted = st.form_submit_button("Clustering Cluster")
 
     if submitted:
         # Ensure we pass the exact feature order expected by the trained pipeline
@@ -511,7 +511,7 @@ In this app, to keep compatibility with your current `.pkl` files:
         X_pca = pca.transform(X_scaled)
         cluster = int(kmeans.predict(X_pca)[0])
 
-        st.success(f"Predicted Cluster: {cluster}")
+        st.success(f"Clustering Cluster: {cluster}")
 
         if profile and "high_cluster" in profile:
             if cluster == profile["high_cluster"]:
