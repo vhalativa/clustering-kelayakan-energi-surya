@@ -236,10 +236,18 @@ and run predictions for new inputs.
     
     st.subheader("Business Understanding")
     st.write(Evaluasi kelayakan energi surya)
-    st.write(Tujuan dari evaluasi kelayakan energi surya adalah untuk menentukan apakah pemasangan sistem energi surya (seperti panel surya) di suatu lokasi tertentu layak secara teknis, ekonomi, dan lingkungan. Evaluasi ini membantu pengambil keputusan (individu, perusahaan, atau pemerintah) dalam merencanakan investasi energi surya dengan lebih baik. Karena dataset belum mempunyai label maka pemodelan Clustering lebih tepat untuk membuat kategori kelayakan secara otomatis Hasil cluster berfungsi untuk menginterpretasikan label secara manual, misalnya:
-    1. Cluster ke 1 → Skor viability tinggi → "Sangat Layak"
-    2. Cluster ke 2 → Skor sedang → "Layak"
-    3. Cluster ke 3 → Skor rendah → "Kurang Layak")
+   st.write("""
+Evaluasi kelayakan energi surya
+
+Tujuan dari evaluasi kelayakan energi surya adalah untuk menentukan apakah pemasangan sistem energi surya (seperti panel surya) di suatu lokasi tertentu layak secara teknis, ekonomi, dan lingkungan. Evaluasi ini membantu pengambil keputusan (individu, perusahaan, atau pemerintah) dalam merencanakan investasi energi surya dengan lebih baik.
+
+Karena dataset belum mempunyai label, maka pemodelan **Clustering** lebih tepat untuk membuat kategori kelayakan secara otomatis.  
+Hasil cluster berfungsi untuk menginterpretasikan label secara manual, misalnya:
+
+1. Cluster ke-1 → Skor viability tinggi → **"Sangat Layak"**
+2. Cluster ke-2 → Skor sedang → **"Layak"**
+3. Cluster ke-3 → Skor rendah → **"Kurang Layak"**
+""")
 
 
     
