@@ -235,7 +235,7 @@ and run predictions for new inputs.
     )
     
     st.subheader("Business Understanding")
-    st.write(""Evaluasi kelayakan energi surya"")
+    st.write('Evaluasi kelayakan energi surya')
     st.write("""
 Evaluasi kelayakan energi surya
 
