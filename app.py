@@ -797,7 +797,7 @@ In this app, to keep compatibility with your current `.pkl` files:
         st.write("PCA vector:")
         st.dataframe(pd.DataFrame([X_pca[0]], columns=[f"PC{i+1}" for i in range(X_pca.shape[1])]), use_container_width=True)
 
-elif nav == "About":
+elif page == "About":
     st.header("Tentang Saya")
     st.image("photos/foto-profil.jpg", width=150)
     
