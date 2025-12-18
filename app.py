@@ -284,7 +284,7 @@ def make_elbow_silhouette(X_pca: np.ndarray, k_min: int = 2, k_max: int = 10):
 st.sidebar.title("☀️ Solar Viability Clustering")
 page = st.sidebar.radio(
     "Menu",
-    ["Home", "Dataset", "Exploratory Data Analysis", "Modelling", "Clustering"],
+    ["Home", "Dataset", "Exploratory Data Analysis", "Modelling", "Clustering", "About"],
 )
 
 # Load models once (and show a friendly error if missing)
@@ -796,3 +796,21 @@ In this app, to keep compatibility with your current `.pkl` files:
         st.dataframe(pd.DataFrame([X_scaled[0]], columns=feature_names), use_container_width=True)
         st.write("PCA vector:")
         st.dataframe(pd.DataFrame([X_pca[0]], columns=[f"PC{i+1}" for i in range(X_pca.shape[1])]), use_container_width=True)
+
+elif nav == "About":
+    st.header("Tentang Saya")
+    st.image("photos/foto-profil.jpg", width=150)
+    
+    st.write("""
+    **Khoiriya Latifah**
+    
+    Saya adalah Dosen Informatika di Universitas Persatuan Guru Republik Indonesia Semarang (UPGRIS) dengan minat dan keahlian pada bidang Artificial Intelligence, Machine Learning, Data Mining, dan Sistem Informasi. Saya aktif dalam kegiatan pengajaran, penelitian, dan pengabdian kepada masyarakat, serta berfokus pada penerapan metode komputasi cerdas untuk menyelesaikan permasalahan nyata di bidang teknologi dan pendidikan.
+
+    Dalam kegiatan akademik dan riset, saya berpengalaman mengimplementasikan berbagai algoritma seperti Random Forest, K-Means Clustering, dan metode analitik data lainnya untuk pengembangan sistem berbasis data dan website. Saya juga terlibat dalam publikasi ilmiah serta kolaborasi riset di tingkat nasional dan internasional.
+
+    Keikutsertaan saya dalam program riset internasional Naveen Jindal Research Fellowship menunjukkan komitmen saya terhadap kolaborasi global dan pengembangan solusi inovatif di era digital. Pengalaman tersebut memperkuat perspektif saya dalam riset lintas budaya serta penerapan teknologi informasi pada konteks global.
+
+    Saya memiliki komitmen untuk terus mengembangkan kompetensi profesional, mengikuti perkembangan teknologi terkini, serta membimbing mahasiswa agar siap menghadapi tantangan di era transformasi digital. Saya terbuka untuk kolaborasi riset, pengembangan proyek teknologi, serta jejaring akademik dan industri.
+    """)
+    st.markdown("---")
+
