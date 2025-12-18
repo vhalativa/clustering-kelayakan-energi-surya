@@ -233,4 +233,4 @@ def make_corr_heatmap(df: pd.DataFrame, cols: list, title: str = "Correlation He
     plt.colorbar()
 
     # annotate values like seaborn annot=True
-    for i in range(le
+    for i in range(le)
