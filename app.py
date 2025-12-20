@@ -791,7 +791,7 @@ In this app, to keep compatibility with your current `.pkl` files:
         else:
             st.caption("Load the dataset to enable higher/lower viability interpretation.")
 
-        st.subheader("Pipeline Output (debug view)")
+        st.subheader("Pipeline Output")
         st.write("Scaled features:")
         st.dataframe(pd.DataFrame([X_scaled[0]], columns=feature_names), use_container_width=True)
         st.write("PCA vector:")
