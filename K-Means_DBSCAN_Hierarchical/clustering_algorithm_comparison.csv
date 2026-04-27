@@ -1,0 +1,4 @@
+Algorithm,Number of Clusters,Silhouette Score,Notes
+K-Means,2,0.45024633166995276,Clusters determined based on Elbow/Silhouette evaluation
+DBSCAN,2,0.2519166847271701,Can detect noise/outliers
+Hierarchical,2,0.450123970235859,Groups data hierarchically
